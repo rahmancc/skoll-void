@@ -1,0 +1,1492 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background-color: #050505;
+    background-image: url("image/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Arial, sans-serif;
+
+    animation: pageFade 1s ease-in-out;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+header {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    background: #0a0a0a;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    height: 70px;
+
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo-icon {
+    width: 28px;
+    height: 28px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+.logo-icon img {
+    display: block;
+
+    width: 25px;
+    height: 25px;
+
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    width: 100%;
+    height: 600px;
+
+    padding-top: 60px;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.8)
+        );
+}
+
+.hero h1 {
+    font-size: 60px;
+    letter-spacing: 5px;
+
+    animation: heroTitle 1s ease-out;
+}
+
+.hero p {
+    margin: 20px 0 30px;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    animation: heroText 1.2s ease-out;
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 30px;
+
+    background: white;
+    color: black;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
+    animation: heroButton 1.4s ease-out;
+}
+
+.btn:hover {
+    background: #cccccc;
+}
+
+
+/* =========================
+   PRODUCT
+========================= */
+
+.product-section {
+    width: 100%;
+    padding: 80px 60px;
+
+    background: rgba(5, 5, 5, 0.85);
+}
+
+.product-section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+
+    font-size: 32px;
+}
+
+.product-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.product-card {
+    background: rgba(10, 10, 10, 0.9);
+
+    padding-bottom: 25px;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    border: 1px solid #222;
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #555;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+.product-card img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s;
+}
+
+.product-card:hover img {
+    transform: scale(1.04);
+}
+
+.product-card h3 {
+    margin-top: 20px;
+
+    font-size: 17px;
+    letter-spacing: 1px;
+}
+
+.price {
+    margin: 12px 0 20px;
+
+    font-size: 16px;
+
+    color: #aaa;
+}
+
+.product-card button {
+    border: 1px solid white;
+
+    padding: 12px 25px;
+
+    background: transparent;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.product-card button:hover {
+    background: white;
+    color: black;
+}
+
+
+/* =========================
+   ORDER
+========================= */
+
+#order {
+    width: 100%;
+    padding: 80px 60px;
+    background: #111;
+    box-sizing: border-box;
+}
+
+#order h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#order form {
+    width: 600px;
+    max-width: 100%;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    background: rgba(15, 15, 15, 0.95);
+
+    border: 1px solid #333;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+#contact {
+    width: 100%;
+    padding: 80px 60px;
+    background: #0a0a0a;
+    box-sizing: border-box;
+}
+
+#contact h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+#contact form {
+    width: 600px;
+    max-width: 100%;
+
+    padding: 40px;
+    box-sizing: border-box;
+
+    background: rgba(15, 15, 15, 0.95);
+
+    border: 1px solid #333;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+/* =========================
+   FORM
+========================= */
+
+form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    background: #fff;
+    color: #111;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+form textarea {
+    min-height: 120px;
+
+    resize: vertical;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    outline: none;
+
+    border-color: #111;
+}
+
+form button {
+    padding: 12px 25px;
+
+    border: 1px solid white;
+
+    background: transparent;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+form button:hover {
+    background: white;
+    color: black;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    width: 100%;
+
+    background: #111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+
+    font-size: 28px;
+}
+
+footer p {
+    color: #aaa;
+}
+
+
+/* =========================
+   PAGE ANIMATION
+========================= */
+
+@keyframes pageFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   HERO ANIMATION
+========================= */
+
+@keyframes heroTitle {
+    from {
+        opacity: 0;
+
+        transform: translateY(30px);
+
+        letter-spacing: 15px;
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+
+        letter-spacing: 5px;
+    }
+}
+
+@keyframes heroText {
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroButton {
+    from {
+        opacity: 0;
+
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media (max-width: 768px) {
+
+    /* NAVBAR */
+    header {
+        width: 100%;
+        height: auto;
+
+        padding: 18px 15px;
+
+        flex-direction: column;
+        gap: 18px;
+
+        box-sizing: border-box;
+    }
+
+    .logo {
+        height: auto;
+        font-size: 22px;
+    }
+
+    .logo-icon {
+        width: 26px;
+        height: 26px;
+    }
+
+    .logo-icon img {
+        width: 24px;
+        height: 24px;
+    }
+
+    nav {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        font-size: 11px;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* HERO */
+    .hero {
+        width: 100%;
+        height: 520px;
+
+        padding: 60px 20px 20px;
+
+        box-sizing: border-box;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: 3px;
+    }
+
+    .hero p {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .btn {
+        padding: 13px 25px;
+        font-size: 13px;
+    }
+
+
+    /* PRODUCT */
+    .product-section {
+        padding: 70px 20px;
+    }
+
+    .product-section h2 {
+        font-size: 28px;
+        margin-bottom: 35px;
+    }
+
+    .product-container {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .product-card img {
+        width: 100%;
+        height: 430px;
+
+        object-fit: cover;
+    }
+
+
+    /* ABOUT */
+    #about {
+        width: 100% !important;
+
+        min-height: auto;
+
+        padding: 80px 20px;
+
+        box-sizing: border-box;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2,
+    #about h2 {
+        font-size: 32px;
+
+        line-height: 1.15;
+    }
+
+    .about-text,
+    #about p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+
+    /* ORDER */
+    #order {
+        width: 100%;
+
+        padding: 80px 20px;
+
+        box-sizing: border-box;
+    }
+
+    #order h2 {
+        font-size: 32px;
+    }
+
+    #order form {
+        width: 100%;
+
+        padding: 25px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* CONTACT */
+    #contact {
+        width: 100%;
+
+        padding: 80px 20px;
+
+        box-sizing: border-box;
+    }
+
+    #contact h2 {
+        font-size: 32px;
+    }
+
+    #contact form {
+        width: 100%;
+
+        padding: 25px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* FOOTER */
+    footer {
+        padding: 50px 20px;
+    }
+
+    footer h2 {
+        font-size: 25px;
+    }
+
+    footer p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+}
+/* =========================
+   FIX ORDER & CONTACT
+========================= */
+
+main {
+    display: block !important;
+    width: 100% !important;
+}
+
+main > section {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    float: none !important;
+    position: relative !important;
+}
+
+#order {
+    display: block !important;
+    width: 100% !important;
+    min-width: 100% !important;
+}
+
+#contact {
+    display: block !important;
+    width: 100% !important;
+    min-width: 100% !important;
+}
+/* =========================
+   PRODUCT CARD UPGRADE
+========================= */
+
+.product-card {
+    position: relative;
+
+    background: rgba(8, 8, 8, 0.95);
+
+    border: 1px solid #292929;
+    border-radius: 8px;
+
+    padding-bottom: 25px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition: 
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+
+/* HOVER CARD */
+
+.product-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #666;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.8);
+}
+
+
+/* GAMBAR */
+
+.product-card img {
+    width: 100%;
+    height: 400px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+
+/* ZOOM GAMBAR */
+
+.product-card:hover img {
+    transform: scale(1.07);
+}
+
+
+/* NAMA PRODUK */
+
+.product-card h3 {
+    margin-top: 22px;
+
+    font-size: 17px;
+
+    letter-spacing: 1.5px;
+
+    transition: 0.3s;
+}
+
+.product-card:hover h3 {
+    letter-spacing: 2px;
+}
+
+
+/* HARGA */
+
+.product-card .price {
+    margin: 12px 0 22px;
+
+    color: #aaa;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+}
+
+
+/* TOMBOL */
+
+.product-card button {
+    position: relative;
+
+    padding: 12px 30px;
+
+    background: transparent;
+
+    color: white;
+
+    border: 1px solid white;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+
+/* EFEK TOMBOL */
+
+.product-card button:hover {
+    background: white;
+
+    color: black;
+
+    transform: scale(1.05);
+}
+
+
+/* GARIS ATAS CARD */
+
+.product-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: white;
+
+    transition: width 0.4s ease;
+}
+
+.product-card:hover::before {
+    width: 100%;
+}   
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    width: 100%;
+    padding: 120px 60px;
+
+    background: rgba(5, 5, 5, 0.92);
+
+    box-sizing: border-box;
+}
+
+.about-content {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+.about-label {
+    margin-bottom: 20px;
+
+    font-size: 13px;
+    letter-spacing: 4px;
+
+    color: #888;
+}
+
+.about-content h2 {
+    margin-bottom: 30px;
+
+    font-size: 45px;
+    line-height: 1.1;
+    letter-spacing: 2px;
+}
+
+.about-text {
+    max-width: 700px;
+
+    margin-bottom: 20px;
+
+    color: #aaa;
+
+    font-size: 16px;
+    line-height: 1.8;
+}
+/* =========================
+   ABOUT
+========================= */
+
+#about {
+    display: block !important;
+
+    width: 100% !important;
+
+    min-height: 400px;
+
+    padding: 100px 60px;
+
+    background: #151515;
+
+    box-sizing: border-box;
+
+    color: white;
+}
+
+#about h2 {
+    font-size: 36px;
+
+    margin-bottom: 30px;
+}
+
+#about p {
+    max-width: 700px;
+
+    margin-bottom: 20px;
+
+    color: #aaa;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+/* =========================
+   ORDER FORM UPGRADE
+========================= */
+
+#order {
+    min-height: 600px;
+    padding: 100px 60px;
+
+    background:
+        linear-gradient(
+            rgba(5, 5, 5, 0.92),
+            rgba(5, 5, 5, 0.96)
+        );
+
+    box-sizing: border-box;
+}
+
+#order h2 {
+    margin-bottom: 40px;
+
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+#order form {
+    width: 600px;
+    max-width: 100%;
+
+    padding: 40px;
+
+    background: rgba(12, 12, 12, 0.95);
+
+    border: 1px solid #292929;
+    border-radius: 10px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+
+    box-sizing: border-box;
+}
+
+#order form label {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #ddd;
+}
+
+#order form input,
+#order form select,
+#order form textarea {
+    background: #080808;
+    color: white;
+
+    border: 1px solid #333;
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+#order form input:focus,
+#order form select:focus,
+#order form textarea:focus {
+    border-color: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+#order form button {
+    width: 100%;
+
+    padding: 15px;
+
+    background: white;
+    color: black;
+
+    border: none;
+    border-radius: 5px;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#order form button:hover {
+    background: #ccc;
+    transform: translateY(-2px);
+}
+/* =========================
+   CONTACT UPGRADE
+========================= */
+
+#contact {
+    min-height: 550px;
+    padding: 100px 60px;
+
+    background:
+        linear-gradient(
+            rgba(10, 10, 10, 0.95),
+            rgba(5, 5, 5, 0.98)
+        );
+
+    box-sizing: border-box;
+}
+
+#contact h2 {
+    margin-bottom: 40px;
+
+    font-size: 42px;
+    letter-spacing: 3px;
+}
+
+#contact form {
+    width: 600px;
+    max-width: 100%;
+
+    padding: 40px;
+
+    background: rgba(12, 12, 12, 0.95);
+
+    border: 1px solid #292929;
+    border-radius: 10px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+
+    box-sizing: border-box;
+}
+
+#contact form label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #ddd;
+
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+#contact form input,
+#contact form textarea {
+    background: #080808;
+    color: white;
+
+    border: 1px solid #333;
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: white;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.08);
+}
+
+#contact form button {
+    width: 100%;
+
+    padding: 15px;
+
+    background: transparent;
+    color: white;
+
+    border: 1px solid white;
+    border-radius: 5px;
+
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#contact form button:hover {
+    background: white;
+    color: black;
+
+    transform: translateY(-2px);
+}
+/* =========================
+   FOOTER UPGRADE
+========================= */
+
+footer {
+    position: relative;
+
+    padding: 60px 20px;
+
+    background: #050505;
+
+    border-top: 1px solid #222;
+
+    text-align: center;
+}
+
+footer h2 {
+    margin-bottom: 12px;
+
+    font-size: 30px;
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #666;
+
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+/* garis kecil di atas logo */
+
+footer::before {
+    content: "";
+
+    display: block;
+
+    width: 50px;
+    height: 2px;
+
+    margin: 0 auto 25px;
+
+    background: white;
+}
+
+/* =========================
+   SCROLL ANIMATION
+========================= */
+
+.product-section h2,
+.product-card,
+#about,
+#order,
+#contact,
+footer {
+    opacity: 0;
+    transform: translateY(50px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.show {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+/* =========================
+   PRODUCT HOVER EFFECT
+========================= */
+
+.product-card {
+    position: relative;
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* Efek card saat disentuh mouse */
+.product-card:hover {
+    transform: translateY(-12px) scale(1.01);
+
+    border-color: #555;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.8);
+}
+
+/* Efek gambar */
+.product-card img {
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+.product-card:hover img {
+    transform: scale(1.08);
+
+    filter: brightness(1.08);
+}
+
+/* Efek nama produk */
+.product-card h3 {
+    transition:
+        letter-spacing 0.4s ease,
+        transform 0.4s ease;
+}
+
+.product-card:hover h3 {
+    letter-spacing: 2px;
+    transform: translateY(-2px);
+}
+
+/* Efek harga */
+.product-card .price {
+    transition: 0.4s ease;
+}
+
+.product-card:hover .price {
+    color: white;
+}
+
+/* Efek tombol */
+.product-card button {
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-card button:hover {
+    background: white;
+    color: black;
+
+    transform: scale(1.06);
+
+    box-shadow:
+        0 0 15px rgba(255, 255, 255, 0.2);
+}
+/* =========================
+   SKOLL.VOID RED HOVER
+========================= */
+
+.product-card {
+    position: relative;
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease,
+        border-color 0.4s ease;
+}
+
+/* Cahaya merah di bagian bawah */
+.product-card::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    bottom: -80px;
+
+    width: 180px;
+    height: 80px;
+
+    background: rgba(180, 0, 0, 0.45);
+
+    transform: translateX(-50%);
+
+    filter: blur(35px);
+
+    opacity: 0;
+
+    transition:
+        opacity 0.5s ease,
+        bottom 0.5s ease;
+}
+
+/* Hover card */
+.product-card:hover {
+    border-color: #8b0000;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.8),
+        0 0 25px rgba(140, 0, 0, 0.18);
+}
+
+/* Cahaya merah muncul */
+.product-card:hover::after {
+    bottom: -20px;
+
+    opacity: 1;
+}
+
+/* Garis merah di atas card */
+.product-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 2px;
+
+    background: #b00000;
+
+    box-shadow:
+        0 0 10px rgba(180, 0, 0, 0.8);
+
+    transition: width 0.5s ease;
+
+    z-index: 5;
+}
+
+.product-card:hover::before {
+    width: 100%;
+}
+
+/* Nama produk berubah merah tipis */
+.product-card:hover h3 {
+    color: #d00000;
+
+    text-shadow:
+        0 0 8px rgba(180, 0, 0, 0.35);
+}
+
+/* Harga tetap putih */
+.product-card:hover .price {
+    color: white;
+}
+/* =========================
+   ABOUT ANIMATION
+========================= */
+
+.about-content {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+#about.show .about-content {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#about.show .about-label {
+    animation: aboutLabel 0.7s ease forwards;
+}
+
+#about.show h2 {
+    animation: aboutTitle 0.8s ease forwards;
+}
+
+#about.show .about-text {
+    animation: aboutText 1s ease forwards;
+}
+
+@keyframes aboutLabel {
+    from {
+        opacity: 0;
+        letter-spacing: 8px;
+    }
+
+    to {
+        opacity: 1;
+        letter-spacing: 4px;
+    }
+}
+
+@keyframes aboutTitle {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aboutText {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* =========================
+   ABOUT RED MOVING GLOW
+========================= */
+
+#about {
+    position: relative;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 20% 50%,
+            rgba(120, 0, 0, 0.20),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(80, 0, 0, 0.18),
+            transparent 35%
+        ),
+        #080808;
+}
+
+/* Cahaya merah bergerak */
+#about::before {
+    content: "";
+
+    position: absolute;
+
+    top: -50%;
+    left: -20%;
+
+    width: 140%;
+    height: 200%;
+
+    background:
+        radial-gradient(
+            ellipse,
+            rgba(150, 0, 0, 0.16),
+            transparent 55%
+        );
+
+    filter: blur(45px);
+
+    animation: redMove 8s ease-in-out infinite alternate;
+
+    pointer-events: none;
+}
+
+/* Biar isi About tetap di atas glow */
+#about .about-content {
+    position: relative;
+    z-index: 2;
+}
+
+@keyframes redMove {
+
+    0% {
+        transform: translateX(-12%) translateY(-5%);
+    }
+
+    50% {
+        transform: translateX(8%) translateY(5%);
+    }
+
+    100% {
+        transform: translateX(-5%) translateY(10%);
+    }
+
+}

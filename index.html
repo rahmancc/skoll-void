@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKOLL.VOID</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+  <header>
+    <div class="logo">
+        <span class="logo-icon">
+            <img src="image/logo 2.png" alt="Skoll Void Logo">
+        </span>
+
+        <span>skoll.void</span>
+    </div>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#product">PRODUCT</a>
+        <a href="#about">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+        <a href="https://www.instagram.com/skoll.voidd?igsi=NnFrOW9vOTlqdjd3">
+            INSTAGRAM
+        </a>
+    </nav>
+</header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero"   id="home">
+
+            <div class="hero-text">
+                <h1>ENTER THE VOID.</h1>
+
+                <p>
+                    Wear your identity.<br>
+                    Define your own path.
+                </p>
+
+                <a href="#product" class="btn">
+                    SHOP NOW
+                </a>
+            </div>
+
+        </section>
+
+
+        <!-- PRODUCT -->
+        <section id="product" class="product-section">
+
+            <h2>OUR PRODUCTS</h2>
+
+            <div class="product-container">
+
+                <!-- PRODUK 1 -->
+        <div class="product-card">
+
+        <img src="image/1.jpg" alt="Skoll Void T-Shirt">
+    
+        <h3>SKOLL VOID TEE #01</h3>
+
+        <p class="price">
+            Rp120.000
+        </p>
+
+        <button onclick="pilihProduk('SKOLL VOID TEE #01')">
+            Buy Now
+    </button>
+
+</div>
+
+
+<!-- PRODUK 2 -->
+<div class="product-card">
+
+    <img src="image/2.jpg" alt="Skoll Void T-Shirt">
+
+    <h3>SKOLL VOID TEE #02</h3>
+
+    <p class="price">
+        Rp139.000
+    </p>
+
+   <button onclick="pilihProduk('SKOLL VOID TEE #02')">
+    Buy Now
+</button>
+</div>
+
+
+<!-- PRODUK 3 -->
+<div class="product-card">
+
+    <img src="image/3.jpg" alt="Skoll Void T-Shirt">
+
+    <h3>SKOLL VOID TEE #03</h3>
+
+    <p class="price">
+        Rp149.000
+    </p>
+
+    <button onclick="pilihProduk('SKOLL VOID TEE #03')">
+    Buy Now
+</button>
+</div>
+
+</section> 
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about-section">
+
+    <h2>ABOUT SKOLL.VOID</h2>
+
+    <p>
+            skoll.void is a clothing brand built around identity,
+            freedom, and individuality. We create pieces for those
+            who don't follow the crowd and choose to define their
+            own path.
+
+    </p>
+
+    <p>
+        Wear your identity. Define your own path.
+    </p>
+
+</section>
+
+<!-- ORDER -->
+        <section id="order">
+
+            <h2>Order</h2>
+            
+        
+          <form>
+
+    <label>Produk:</label>
+
+    <select id="produk" required>
+        <option value="">Pilih Produk</option>
+        <option value="SKOLL VOID TEE #01">SKOLL VOID TEE #01 - Rp120.000</option>
+        <option value="SKOLL VOID TEE #02">SKOLL VOID TEE #02 - Rp139.000</option>
+        <option value="SKOLL VOID TEE #03">SKOLL VOID TEE #03 - Rp149.000</option>
+    </select>
+
+    <br><br>
+
+    <label>Nama:</label>
+    <input type="text" placeholder="Masukkan nama" required>
+
+                <br><br>
+
+                <label>Ukuran:</label>
+
+                <select required>
+                    <option value="">Pilih Ukuran</option>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                    <option>XL</option>
+                </select>
+
+                <br><br>
+
+                <label>Jumlah:</label>
+
+                <input 
+                    type="number" 
+                    placeholder="Masukkan jumlah" 
+                    min="1" 
+                    required
+                >
+
+                <br><br>
+
+                <label>Alamat:</label>
+
+                <br>
+
+                <textarea 
+                    placeholder="Masukkan alamat" 
+                    required
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Order Now
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <h2>Contact</h2>
+
+            <form>
+
+                <label>Nama:</label>
+                <input type="text" required>
+
+                <br><br>
+
+                <label>Email:</label>
+                <input type="email" required>
+
+                <br><br>
+
+                <label>Pesan:</label>
+                <textarea 
+                    placeholder="Tulis pesan..."
+                    required
+                ></textarea>
+
+                <br><br>
+
+                <button type="submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>skoll.void</h2>
+
+        <p>
+            © 2026 skoll.void. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script>
+
+    /* =========================
+       NOMOR WHATSAPP BISNIS
+    ========================= */
+
+    const nomorWA = "ISI_NOMOR_WA_DISINI";
+
+
+    /* =========================
+       BUY NOW PRODUK
+    ========================= */
+
+    function pilihProduk(namaProduk) {
+
+        document.getElementById("produk").value = namaProduk;
+
+        document.getElementById("order").scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+
+
+    /* =========================
+       ORDER KE WHATSAPP
+    ========================= */
+
+    const orderForm = document.querySelector("#order form");
+
+    orderForm.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const produk = document.getElementById("produk").value;
+
+        const nama = document.querySelector(
+            '#order input[type="text"]'
+        ).value;
+
+        const ukuran = document.querySelector(
+            '#order select:not(#produk)'
+        ).value;
+
+        const jumlah = document.querySelector(
+            '#order input[type="number"]'
+        ).value;
+
+        const alamat = document.querySelector(
+            '#order textarea'
+        ).value;
+
+
+        const pesan =
+`Hai Admin, saya mau pesan baju.
+
+Produk: ${produk}
+Nama: ${nama}
+Ukuran: ${ukuran}
+Jumlah: ${jumlah}
+Alamat: ${alamat}`;
+
+
+        const url =
+            "https://wa.me/" +
+            nomorWA +
+            "?text=" +
+            encodeURIComponent(pesan);
+
+
+        window.open(url, "_blank");
+
+    });
+
+
+    /* =========================
+       SCROLL ANIMATION
+    ========================= */
+
+    const elements = document.querySelectorAll(
+        ".product-section h2, .product-card, #about, #order, #contact, footer"
+    );
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.15
+        }
+    );
+
+
+    elements.forEach((element) => {
+        observer.observe(element);
+    });
+
+</script>
+
+</body>
+</html>
